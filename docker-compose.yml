@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  db:
+    image: mysql:8.0.26
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: example
+      MYSQL_DATABASE: nestdebug
+    ports:
+      - "3306:3306"
+    expose:
+      - '3306'
